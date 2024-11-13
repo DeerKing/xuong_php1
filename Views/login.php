@@ -1,4 +1,4 @@
-<form>
+<form method="POST" action="">
     <table>
         <tr>
             <td>
@@ -17,5 +17,5 @@
             </td>
         </tr>
     </table>
-    <button type="submit">Đăng nhập</button>
+    <button type="submit" name="login">Đăng nhập</button>
 </form>

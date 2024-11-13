@@ -22,3 +22,8 @@ function getNameProduct($arr_products){
 }
 
 getNameProduct($products);//Gọi hàm ra sử dụng
+//Cokie là lưu dữ liệu ở máy local
+setcookie('name', 'TrungND87', time() + 7*24*60*60);
+if(isset($_COOKIE['name'])) echo $_COOKIE['name'];
+//Xóa cookie
+setcookie('name', 'TrungND87', time() - 7*24*60*60);//Set thời gian cookie thành quá khứ để xóa cookie
