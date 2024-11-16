@@ -5,6 +5,7 @@ $route = $_GET['route']  ?? '';
 require_once('Controller/LoginController.php');
 require_once('Controller/HomeController.php');
 require_once('Model/Database.php');
+
 switch($route){
     case 'login':
         $login_controller = new LoginController(); 
@@ -22,5 +23,13 @@ switch($route){
         unset($_SESSION['logged']);
         //Nếu xóa toàn bộ session thì dùng session_destroy();
         header("Location: index.php?route=login");
+        break;
+    case 'cart':
+        $home = new HomeController();
+        $home->cart();
+        break;
+    case 'list_cart':
+        $home = new HomeController();
+        $home->listCart();
         break;
 }
