@@ -1,0 +1,21 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+table, tr, td{
+    border: 1px solid #000;
+}
+td{
+    padding:10px;
+    text-align: left;
+}
+.button-add{
+    float:right;margin:10px 0;background-color:green;
+    color:#fff;
+    padding:10px;
+    border:1px solid #ccc;
+}

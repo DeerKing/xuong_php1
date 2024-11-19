@@ -49,4 +49,38 @@ class Database{
         $result = $stmt->fetch();
         return $result;
     }
+    
+    //Hàm thêm sản phẩm vào DB
+    public function store($pro_name, $pro_price, $pro_description, $pro_article, $pro_image){
+        $sql = "INSERT INTO products(name, price, description, article, image, category_id)
+                VALUE ('".$pro_name."', ".$pro_price.", '".$pro_description."', '".$pro_article."', '".$pro_image."', 1 )
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch();
+        return 'Thêm thành công';
+    }
+    //Hàm sửa sản phẩm
+    public function update($id,$pro_name, $pro_price, $pro_description, $pro_article, $pro_image ){
+        $sql = "UPDATE products SET
+                name = '".$pro_name."',
+                price = '".$pro_price."',
+                description = '".$pro_description."',
+                article = '".$pro_article."',
+                image = '".$pro_image."'
+                WHERE id = $id
+            ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch();
+        return 'Sửa thành công';
+    }
+    //Hàm xóa sản phẩm
+    public function remove($id){
+        $sql = "DELETE FROM products WHERE id = $id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch();
+        return 'Xóa thành công';
+    }
 }

@@ -8,7 +8,7 @@
             <td>Số lượng: 
                 <input type="number" name="soluong" width="50"/>
             </td>
-            <td><button type="submit" name="submit">Thêm vào giỏ hàng</button></td>
+            <td><button type="submit" name="submit" value="add">Thêm vào giỏ hàng</button></td>
         </tr>
 
     </table>
