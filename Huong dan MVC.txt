@@ -1,0 +1,6 @@
+Các bước làm trang chức năng bằng MVC:
+-	Bước 1: Tạo route trong trang index.php
+-	Bước 2: Kết nối Database và tạo model trong model/Database.php
+-	Bước 3: Tạo file trong Views
+-	Bước 4: Tạo controller trong Controller, xử lý logic model và view để thực hiện chức năng
+-	Bước 5: Hiển thị chức năng controller trong route của index.php
